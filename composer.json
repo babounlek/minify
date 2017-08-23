@@ -1,0 +1,14 @@
+{
+    "name": "r2m/minifier",
+    "description": "Package to minify css and javascript  script or files",
+    "type": "composer-plugin",
+    "license": "free",
+    "authors": [
+        {
+            "name": "BABOUNLEK",
+            "email": "babounlek1@yahoo.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
