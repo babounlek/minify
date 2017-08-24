@@ -1,6 +1,6 @@
 <?php
 
-namespace r2m\minifier;
+namespace babounlek\minifier;
 
 use Illuminate\Support\ServiceProvider;
 
