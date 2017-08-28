@@ -26,3 +26,15 @@ $min = new Minifier();
 $min->addsource($source);
 $result = $min->minify();
 ```
+### Sample
+#### input
+```css
+.container-search {
+	margin-top: 55px;
+	margin-bottom: 10px;
+}
+```
+#### output
+```css
+.container-search{margin-top:55px;margin-bottom:10px}
+```
