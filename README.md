@@ -1,6 +1,9 @@
 # Minifier
 ## Intallation
+
+```sh
 composer require babounlek/minifier "dev-master"
+```
 
 ## Usage
 In your app.php providers section add:
@@ -38,3 +41,6 @@ $result = $min->minify();
 ```css
 .container-search{margin-top:55px;margin-bottom:10px}
 ```
+
+## Try it
+Try it online at <http://rank2me.dev/en/minify>.
