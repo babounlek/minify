@@ -15,15 +15,14 @@ Now in aliases section add:
 ```
 
 ```php
-  use Minifier;
+use Minifier;
 
-  $min = new Minifier($source);
-  $result = $min->minify();
-  
-  or
+$min = new Minifier($source);
+$result = $min->minify();
 
-  $min = new Minifier();
-  $min->addsource($source);
-  $result = $min->minify();
+or
 
+$min = new Minifier();
+$min->addsource($source);
+$result = $min->minify();
 ```
