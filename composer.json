@@ -9,9 +9,6 @@
             "email": "babounlek1@yahoo.fr"
         }
     ],
-    "repositories": [
-       { "type": "vcs", "url": "https://github.com/babounlek/minifier.git" }
-    ],
     "minimum-stability": "dev",
     "require": {
 		 "php": ">=5.3.0"
