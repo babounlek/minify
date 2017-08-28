@@ -1,4 +1,7 @@
 # Minifier
+## Intallation
+composer require babounlek/minifier "dev-master"
+
 ## Usage
 In your app.php providers section add:
 
