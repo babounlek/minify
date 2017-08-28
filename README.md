@@ -1,5 +1,6 @@
 # Minifier
 ## Intallation
+For installation, add a dependency on babounlek/minifier to your composer.json
 
 ```sh
 composer require babounlek/minifier "dev-master"
@@ -43,4 +44,4 @@ $result = $min->minify();
 ```
 
 ## Try it
-Try it online at <http://rank2me.dev/en/minify>.
+Try it online at <http://rank2me.com/en/minify>.
