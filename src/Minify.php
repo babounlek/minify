@@ -9,6 +9,7 @@ class minify
 {
 
   public $source = "";
+  private $extension = "";
 
   function __construct()
   {
@@ -18,6 +19,13 @@ class minify
           if($arg)$this->addsource($arg);
           //unset($args[$index]);
       }
+  }
+
+  public function setExtension($ext)
+  {
+    $this->extension = $ext;
+    if(!in_array(strtoupper($this->extension),['CSS','JS']))
+    throw new \Exception("This extension is not supported", 1);
   }
 
   public function addsource($source)
@@ -33,7 +41,24 @@ class minify
 	{
     $buffer = $this->source;
 		$original = mb_strlen($buffer);
-		// Remove comments
+    if(strtoupper($this->extension)=='CSS')
+    {
+      $buffer = $this->minifyCSS();
+    }
+    elseif(strtoupper($this->extension)=='JS')
+    {
+      $buffer = $this->minifyJS();
+    }
+
+		$final= mb_strlen($buffer,"UTF8");
+
+		return [$buffer,$original,$final];
+	}
+
+  public function minifyCSS()
+  {
+    $buffer = $this->source;
+    // Remove comments
 		$buffer = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $buffer);
 		// Remove space after colons
 		$buffer = str_replace(': ', ':', $buffer);
@@ -42,9 +67,17 @@ class minify
     $buffer = str_replace("  "," ",$buffer);
     $buffer = str_replace(array(' {',' }',' ;','; ',', '),array('{','}',';',';',','), $buffer);
     $buffer = str_replace(";}","}",$buffer);
-		$final= mb_strlen($buffer,"UTF8");
+    return $buffer;
+  }
 
-		return [$buffer,$original,$final];
-	}
+  public function minifyJS()
+  {
+      $buffer = $this->source;
+      $buffer = preg_replace("/((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/", "", $buffer);
+      $buffer = str_replace(["\r\n","\r","\t","\n",'  ','    ','     '], '', $buffer);
+      $buffer = preg_replace(['(( )+\))','(\)( )+)'], ')', $buffer);
+
+      return $buffer;
+  }
 
 }
