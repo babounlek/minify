@@ -31,11 +31,13 @@ or
 $min = new Minifier();
 $min->addsource($source);
 $result = $min->minify();
+
 /*$result is an array containing of tree elements as:
 - first is the compressed string
 - second is the size of original string
 - third is the size of final string
 */
+
 /* $source can be a css or javascript script or url of css or javascript file*/
 ```
 
