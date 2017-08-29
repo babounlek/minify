@@ -1,7 +1,5 @@
 {
-<<<<<<< HEAD
     "name": "babounlek/minify",
->>>>>>> b7973ef562ea405c27ae686cdfcbeb9ad17cd5ec
     "description": "Package to minify css and javascript script or files",
     "type": "library",
     "license": "MIT",
@@ -17,9 +15,7 @@
 	},
     "autoload": {
         "psr-4": {
-<<<<<<< HEAD
             "babounlek\\minify\\": "src/"
->>>>>>> b7973ef562ea405c27ae686cdfcbeb9ad17cd5ec
         }
     }
 }
