@@ -24,12 +24,14 @@ Now in aliases section add:
 use minify;
 
 $min = new minify($source);
+$min->setExtension("css");
 $result = $min->minify();
 
 or
 
 $min = new minify();
 $min->addsource($source);
+$min->setExtension("css");
 $result = $min->minify();
 
 /*$result is an array containing of tree elements as:
