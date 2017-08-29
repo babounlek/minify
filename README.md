@@ -9,7 +9,7 @@ composer require babounlek/minifier "dev-master"
 ## Usage
 In your app.php,
 
-in providers section add:
+In providers section add:
 
 ```php
 babounlek\minifier\minifierServiceProvider::class,
@@ -31,7 +31,10 @@ or
 $min = new Minifier();
 $min->addsource($source);
 $result = $min->minify();
+
+/* $source can be a css or javascript script or url of css or javascript file*/
 ```
+
 ### Sample
 #### input
 ```css
@@ -46,4 +49,4 @@ $result = $min->minify();
 ```
 
 ## Try it
-Try it online at <http://rank2me.com/en/minify>.
+Try it online at: <http://rank2me.com/en/minify>.
