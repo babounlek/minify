@@ -1,10 +1,10 @@
 <?php
 
-namespace babounlek\minifier;
+namespace babounlek\minify;
 
 use Illuminate\Support\ServiceProvider;
 
-class MinifierServiceProvider extends ServiceProvider
+class minifyServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.

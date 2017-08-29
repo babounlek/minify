@@ -1,12 +1,11 @@
 <?php
 
-namespace babounlek\minifier;
-use Url;
+namespace babounlek\minify;
 
 /**
  *
  */
-class Minifier
+class minify
 {
 
   public $source = "";
