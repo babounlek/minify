@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # minify
 ## Intallation
 For installation, add a dependency on babounlek/minify to your composer.json
@@ -115,5 +114,4 @@ $result = $min->minify();
 ```
 
 ## Try it
-Try it online at: <http://rank2me.com/en/minify>.
->>>>>>> b7973ef562ea405c27ae686cdfcbeb9ad17cd5ec
+Try it online at: <http://rank2me.com/en/minify>
