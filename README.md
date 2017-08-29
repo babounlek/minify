@@ -7,7 +7,9 @@ composer require babounlek/minifier "dev-master"
 ```
 
 ## Usage
-In your app.php providers section add:
+In your app.php,
+
+in providers section add:
 
 ```php
 babounlek\minifier\minifierServiceProvider::class,
